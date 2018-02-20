@@ -1,0 +1,18 @@
+package com.zou.protobufAndNetty;
+
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.SimpleChannelInboundHandler;
+
+public class TestServerHandler extends SimpleChannelInboundHandler<MyDataInfo.Person> {
+
+    @Override
+    protected void channelRead0(ChannelHandlerContext ctx, MyDataInfo.Person msg) throws Exception {
+
+        //服务端接收到消息，并对其进行处理
+
+        System.out.println(msg.getName());
+        System.out.println(msg.getAddress());
+        System.out.println(msg.getAge());
+
+    }
+}
