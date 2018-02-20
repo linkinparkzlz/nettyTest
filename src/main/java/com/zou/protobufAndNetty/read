@@ -1,0 +1,17 @@
+
+通过Netty进行网络传输
+
+1.先运行服务端
+2.再运行客户端
+3.返回服务端查看输出
+
+
+
+此实例的问题：
+如果客户端有多个message，或者说多个实例对象，怎样进行处理呢？
+
+现在是写死的：
+    pipeline.addLast(new ProtobufDecoder(MyDataInfo.Person.getDefaultInstance()));
+
+服务器端在处理的时候，也不能将其写死
+    public class TestServerHandler extends SimpleChannelInboundHandler<MyDataInfo.Person>
