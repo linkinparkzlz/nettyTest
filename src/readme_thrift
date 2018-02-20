@@ -1,0 +1,9 @@
+thrift生成代码的命令，在工程目录下执行
+
+thrift --gen java src/thrift/data.thrift
+
+生成之后，需要将generated包手工复制到java目录下：
+
+——————————————————
+使用gradle导入thrift包的时候使用如下，不然可能出错
+compile 'org.apache.thrift:libthrift:0.11.0'
