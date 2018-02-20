@@ -23,5 +23,9 @@ dependencies {
     // https://mvnrepository.com/artifact/io.netty/netty-all
     compile group: 'io.netty', name: 'netty-all', version: '4.1.10.Final'
 
+    compile 'org.apache.thrift:libthrift:0.11.0'
+
+
+
 
 }
