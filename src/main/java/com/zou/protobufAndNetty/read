@@ -1,5 +1,5 @@
 
-通过Netty进行网络传输
+客户端和服务器端基于protobuf通过Netty进行通信
 
 1.先运行服务端
 2.再运行客户端
@@ -15,3 +15,7 @@
 
 服务器端在处理的时候，也不能将其写死
     public class TestServerHandler extends SimpleChannelInboundHandler<MyDataInfo.Person>
+
+
+
+
