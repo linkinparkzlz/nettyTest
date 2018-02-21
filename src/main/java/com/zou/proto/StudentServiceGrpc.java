@@ -29,11 +29,11 @@ public final class StudentServiceGrpc {
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<com.zou.proto.MyRequest,
-      com.zou.proto.MyResponse> METHOD_GET_REAL_NAME_BY_USER_NAME =
+      com.zou.proto.MyResponse> METHOD_GET_REAL_NAME_BY_USERNAME =
       io.grpc.MethodDescriptor.<com.zou.proto.MyRequest, com.zou.proto.MyResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.zou.proto.StudentService", "GetRealNameByUserName"))
+              "com.zou.proto.StudentService", "GetRealNameByUsername"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.zou.proto.MyRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -69,20 +69,20 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public void getRealNameByUserName(com.zou.proto.MyRequest request,
+    public void getRealNameByUsername(com.zou.proto.MyRequest request,
         io.grpc.stub.StreamObserver<com.zou.proto.MyResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_REAL_NAME_BY_USER_NAME, responseObserver);
+      asyncUnimplementedUnaryCall(METHOD_GET_REAL_NAME_BY_USERNAME, responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_GET_REAL_NAME_BY_USER_NAME,
+            METHOD_GET_REAL_NAME_BY_USERNAME,
             asyncUnaryCall(
               new MethodHandlers<
                 com.zou.proto.MyRequest,
                 com.zou.proto.MyResponse>(
-                  this, METHODID_GET_REAL_NAME_BY_USER_NAME)))
+                  this, METHODID_GET_REAL_NAME_BY_USERNAME)))
           .build();
     }
   }
@@ -107,10 +107,10 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public void getRealNameByUserName(com.zou.proto.MyRequest request,
+    public void getRealNameByUsername(com.zou.proto.MyRequest request,
         io.grpc.stub.StreamObserver<com.zou.proto.MyResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_REAL_NAME_BY_USER_NAME, getCallOptions()), request, responseObserver);
+          getChannel().newCall(METHOD_GET_REAL_NAME_BY_USERNAME, getCallOptions()), request, responseObserver);
     }
   }
 
@@ -134,9 +134,9 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public com.zou.proto.MyResponse getRealNameByUserName(com.zou.proto.MyRequest request) {
+    public com.zou.proto.MyResponse getRealNameByUsername(com.zou.proto.MyRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_REAL_NAME_BY_USER_NAME, getCallOptions(), request);
+          getChannel(), METHOD_GET_REAL_NAME_BY_USERNAME, getCallOptions(), request);
     }
   }
 
@@ -160,14 +160,14 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.zou.proto.MyResponse> getRealNameByUserName(
+    public com.google.common.util.concurrent.ListenableFuture<com.zou.proto.MyResponse> getRealNameByUsername(
         com.zou.proto.MyRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_REAL_NAME_BY_USER_NAME, getCallOptions()), request);
+          getChannel().newCall(METHOD_GET_REAL_NAME_BY_USERNAME, getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_GET_REAL_NAME_BY_USER_NAME = 0;
+  private static final int METHODID_GET_REAL_NAME_BY_USERNAME = 0;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -186,8 +186,8 @@ public final class StudentServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_GET_REAL_NAME_BY_USER_NAME:
-          serviceImpl.getRealNameByUserName((com.zou.proto.MyRequest) request,
+        case METHODID_GET_REAL_NAME_BY_USERNAME:
+          serviceImpl.getRealNameByUsername((com.zou.proto.MyRequest) request,
               (io.grpc.stub.StreamObserver<com.zou.proto.MyResponse>) responseObserver);
           break;
         default:
@@ -223,7 +223,7 @@ public final class StudentServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new StudentServiceDescriptorSupplier())
-              .addMethod(METHOD_GET_REAL_NAME_BY_USER_NAME)
+              .addMethod(METHOD_GET_REAL_NAME_BY_USERNAME)
               .build();
         }
       }

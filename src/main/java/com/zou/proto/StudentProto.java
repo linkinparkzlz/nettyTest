@@ -36,7 +36,7 @@ public final class StudentProto {
       "\n\rStudent.proto\022\rcom.zou.proto\"\035\n\tMyRequ" +
       "est\022\020\n\010username\030\001 \001(\t\"\036\n\nMyResponse\022\020\n\010r" +
       "ealname\030\002 \001(\t2`\n\016StudentService\022N\n\025GetRe" +
-      "alNameByUserName\022\030.com.zou.proto.MyReque" +
+      "alNameByUsername\022\030.com.zou.proto.MyReque" +
       "st\032\031.com.zou.proto.MyResponse\"\000B\037\n\rcom.z" +
       "ou.protoB\014StudentProtoP\001b\006proto3"
     };
