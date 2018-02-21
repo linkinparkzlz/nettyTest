@@ -10,7 +10,7 @@ public class GrpcClient {
 
     public static void main(String[] args) {
 
-        ManagedChannel managedChannel = ManagedChannelBuilder.forAddress("localhost", 8890).
+        ManagedChannel managedChannel = ManagedChannelBuilder.forAddress("localhost", 8899).
                 usePlaintext(true).build();
         StudentServiceGrpc.StudentServiceBlockingStub blockingStub = StudentServiceGrpc.
                 newBlockingStub(managedChannel);
