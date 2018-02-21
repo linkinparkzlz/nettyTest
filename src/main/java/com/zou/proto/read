@@ -1,0 +1,2 @@
+1.编写好proto文件后，使用如下命令进行构建：
+gradle generateProto
