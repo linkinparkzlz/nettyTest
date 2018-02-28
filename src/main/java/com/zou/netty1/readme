@@ -1,0 +1,59 @@
+
+Netty是一个异步的  事件驱动的 网络应用框架。
+
+
+Netty is an asynchronous event-driven network application framework
+for rapid development of maintainable high performance protocol servers & clients.
+
+——————————————————————————————————————————————————————————————-
+
+
+Netty是一个NIO客户端服务器框架。
+
+——————————————————————————
+
+用gradle进行build项目的命令：
+gradle build clean
+
+————————————————————
+
+终端使用curl命令访问：
+
+curl 'http://localhost:8899'
+
+——————————————
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
